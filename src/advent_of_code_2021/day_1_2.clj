@@ -1,5 +1,4 @@
-(ns advent-of-code-2021.day_1_2.clj
-  (:require [advent-of-code-2021.utils :as util]))
+(require '[advent-of-code-2021.utils :as util])
 
 (defn solve [input]
   (->>
