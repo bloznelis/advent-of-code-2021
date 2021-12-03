@@ -1,10 +1,10 @@
 (require '[clojure.string :as str])
 
 (defn handle-instruction [pos instruction]
-  (let [instrucion-name (first instruction)
+  (let [instruction-name (first instruction)
         value (second instruction)]
 
-    (case instrucion-name
+    (case instruction-name
       "forward" (->
                  (update pos :horizontal #(+ % value))
                  (update :depth #(+ % (* (:aim pos) value))))
