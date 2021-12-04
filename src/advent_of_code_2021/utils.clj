@@ -18,3 +18,6 @@
   (->>
    (str/split-lines raw-input)
    (mapv #(mapv read-string (str/split % #"")))))
+
+(defn parse-blocks [raw-input]
+  (str/split raw-input #"\n\n"))
