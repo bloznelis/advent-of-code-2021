@@ -1,4 +1,3 @@
-(require '[clojure.string :as str])
 (require '[advent-of-code-2021.utils :as util])
 
 (defn calc-distances [points]
@@ -7,7 +6,6 @@
 
 (defn solve [input]
   (->>
-   (str/split input #",")
-   (mapv #(read-string %))
+   (util/num-list input)
    (calc-distances)
    (apply +)))

@@ -1,4 +1,4 @@
-(require '[clojure.string :as str])
+(require '[advent-of-code-2021.utils :as util])
 
 (defn sum-factorial [x]
   (if (= x 0)
@@ -29,7 +29,4 @@
              lowest-fuel)))))))
 
 (defn solve [input]
-  (->>
-   (str/split input #",")
-   (mapv #(read-string %))
-   (go)))
+  (go (util/num-list input)))

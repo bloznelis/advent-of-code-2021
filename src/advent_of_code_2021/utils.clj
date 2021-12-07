@@ -29,3 +29,8 @@
     (if (odd? size)
       (nth sorted-points mid-point)
       (/ (+ (nth sorted-points mid-point) (nth sorted-points (dec mid-point))) 2))))
+
+(defn num-list [raw-input]
+  (->>
+   (str/split raw-input #",")
+   (mapv #(read-string %))))
