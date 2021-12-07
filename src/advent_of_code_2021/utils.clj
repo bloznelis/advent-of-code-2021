@@ -21,3 +21,11 @@
 
 (defn parse-blocks [raw-input]
   (str/split raw-input #"\n\n"))
+
+(defn median [points]
+  (let [sorted-points (sort points)
+        size (count sorted-points)
+        mid-point (/ size 2)]
+    (if (odd? size)
+      (nth sorted-points mid-point)
+      (/ (+ (nth sorted-points mid-point) (nth sorted-points (dec mid-point))) 2))))
