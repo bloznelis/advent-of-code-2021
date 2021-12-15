@@ -23,5 +23,3 @@
 
 (defn p1 [input] (solve input 10))
 (defn p2 [input] (solve input 40))
-
-(p2 (slurp "/home/lukas/code/clojure/advent-of-code-2021/input.txt"))
